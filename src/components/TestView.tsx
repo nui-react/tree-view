@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/treeView.css";
-import {
+import TreeView, {
   CirclePointer,
   TreeBadge,
   TreeViewItem,
@@ -14,8 +14,8 @@ export interface TestViewProps {
 
 const TestView: React.FC<TestViewProps> = ({ header, children }) => {
   return (
-    <div className="treeViewPanel">
-      <CirclePointer header={header} showMainConnector />
+    <TreeView header={header}>
+      <CirclePointer header={'test header'} showMainConnector={true} />
       <TreeViewItemContainer>
         <TreeViewItem title="my tree view 1"></TreeViewItem>
       </TreeViewItemContainer>
@@ -49,8 +49,9 @@ const TestView: React.FC<TestViewProps> = ({ header, children }) => {
           <TreeBadge label="my lable" />
         </TreeViewItem>
       </TreeViewItemContainer>
+      <CirclePointer header={'test header'} showMainConnector={true} setAsLast/>
       {children}
-    </div>
+    </TreeView>
   );
 };
 

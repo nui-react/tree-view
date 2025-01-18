@@ -128,7 +128,7 @@
 
 .treeViewHeader {
   color: #00f0ff;
-  padding-left: 35px;
+  /* padding-left: 35px; */
   padding-top: 3px;
   font-size: 24px;
 }

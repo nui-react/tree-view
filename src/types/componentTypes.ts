@@ -6,6 +6,7 @@ export interface ButtonProps {
 export interface CirclePointerProps {
   header: string;
   showMainConnector?: boolean;
+  setAsLast?: boolean;
 }
 
 export interface TreeViewProps {

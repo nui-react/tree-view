@@ -24,6 +24,7 @@ export default TreeView;
 export const CirclePointer: React.FC<CirclePointerProps> = ({
   header,
   showMainConnector = true,
+  setAsLast = false,
 }) => {
   return (
     <div className="treeViewHeaderPanel">
@@ -36,12 +37,19 @@ export const CirclePointer: React.FC<CirclePointerProps> = ({
           </div>
         </span>
       )}
+      {!setAsLast && (
+        <span
+          className={`connectorHeaderVerticalLine ${
+            showMainConnector ? "withMainConnector" : "withoutMainConnector"
+          }`}
+        />
+      )}
       <span
-        className={`connectorHeaderVerticalLine ${
-          showMainConnector ? "withMainConnector" : "withoutMainConnector"
-        }`}
-      />
-      <span className="treeViewHeader"> {header} </span>
+        className="treeViewHeader"
+        style={{ paddingLeft: setAsLast ? "15px" : "35px" }}
+      >
+        {header}
+      </span>
     </div>
   );
 };
