@@ -52,8 +52,6 @@
   border-left: 1px solid #00f0ff80;
 }
 
-
-
 .itemConnector {
   height: auto;
   margin-left: -6px;
@@ -79,6 +77,18 @@
   margin-left: -6.5px;
 }
 
+.treeViewItemAccordianBreakLine {
+  margin-top: 0 !important;
+  margin-bottom: 1rem !important;
+  border: none;
+  border-top: 1px solid #00f0ff80;
+}
+
+.techBadge {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 /********************* layout styles *********************/
 .treeViewHeaderPanel {
   display: flex;
@@ -89,19 +99,6 @@
   padding-left: 35px;
   padding-top: 3px;
   font-size: 24px;
-}
-
-.treeViewTechPanel {
-  flex-wrap: wrap;
-}
-
-.treeViewTechPanelHeader {
-  width: 100%;
-  padding: 0.5rem 1.5rem;
-}
-
-.treeViewTechPanelItems {
-  margin-bottom: 1rem !important;
 }
 
 .treeViewItem {
@@ -127,4 +124,99 @@
   border-radius: 10px;
   backdrop-filter: blur(10px);
   /* font-family: $codaFamilly; */
+}
+
+.treeViewItemAccordian {
+  background-color: transparent;
+  letter-spacing: 0.5px;
+}
+
+.treeViewItemAccordianContainer {
+  display: flex;
+  align-items: center;
+}
+
+.treeViewItemAccordianImg {
+  height: 60px;
+  width: auto;
+  border: 1px solid #00f0ff80;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.roundedLogoHolder {
+  border: 1px solid #00f0ff80;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.treeViewItemAccordianTechPanel {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  align-items: start;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.treeViewTechPanel {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 194, 255, 0.6) 0%,
+    rgba(217, 217, 217, 0) 100%
+  );
+  background-size: 25%;
+  background-repeat: no-repeat;
+  border-radius: inherit;
+  /* background-position-y: 0.5px; */
+}
+
+.treeViewTechPanelHeader {
+  width: 25%;
+  height: 100%;
+  padding: 0.75rem 1.5rem;
+  font-size: 20px;
+}
+
+.treeViewTechPanelItems {
+  width: 75%;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+@media screen and (max-width: 450px) {
+  .treeViewItemAccordianContainer {
+    flex-wrap: wrap;
+  }
+
+  .treeViewItemAccordianImg {
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .treeViewTechPanel {
+    flex-wrap: wrap;
+  }
+
+  .treeViewTechPanelHeader {
+    width: 100%;
+    padding: 0.5rem 1.5rem;
+  }
+
+  .treeViewTechPanelItems {
+    margin-bottom: 1rem !important;
+  }
 }
