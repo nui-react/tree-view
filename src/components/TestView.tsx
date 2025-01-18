@@ -1,11 +1,10 @@
 import React from "react";
 import "../styles/treeView.css";
-import TreeView, {
-  CirclePointer,
-  TreeBadge,
-  TreeViewItem,
-  TreeViewItemContainer,
-} from "./TreeView";
+import TreeView from "./TreeView";
+import CirclePointer from "./CirclePointer";
+import TreeViewItem from "./TreeViewItem";
+import TreeViewItemContainer from "./TreeViewItemContainer";
+import TreeBadge from "./TreeBadge";
 
 export interface TestViewProps {
   header: string;
@@ -15,9 +14,14 @@ export interface TestViewProps {
 const TestView: React.FC<TestViewProps> = ({ header, children }) => {
   return (
     <TreeView header={header}>
-      <CirclePointer header={'test header'} showMainConnector={true} />
+      <CirclePointer header={"test header"} />
       <TreeViewItemContainer>
-        <TreeViewItem title="my tree view 1"></TreeViewItem>
+        <TreeViewItem title="my tree view 1" />
+      </TreeViewItemContainer>
+      <TreeViewItemContainer>
+        <TreeViewItem title="my tree view 1" direction="col">
+          hello world...!
+        </TreeViewItem>
       </TreeViewItemContainer>
       <TreeViewItemContainer>
         <TreeViewItem
@@ -49,7 +53,12 @@ const TestView: React.FC<TestViewProps> = ({ header, children }) => {
           <TreeBadge label="my lable" />
         </TreeViewItem>
       </TreeViewItemContainer>
-      <CirclePointer header={'test header'} showMainConnector={true} setAsLast/>
+      <CirclePointer header={"test header"} showMainConnector={true} />
+      <CirclePointer
+        header={"test header"}
+        showMainConnector={true}
+        setAsLast
+      />
       {children}
     </TreeView>
   );
