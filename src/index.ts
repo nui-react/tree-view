@@ -1,4 +1,3 @@
-export { default as Button } from "../src/components/Button";
 export { default as TreeView } from "../src/components/TreeView";
 export { default as TreeViewItem } from "../src/components/TreeViewItem";
 export { default as TreeViewItemContainer } from "../src/components/TreeViewItemContainer";

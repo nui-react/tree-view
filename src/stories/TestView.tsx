@@ -1,17 +1,17 @@
 import React from "react";
 import "../styles/treeView.css";
-import TreeView from "./TreeView";
-import CirclePointer from "./CirclePointer";
-import TreeViewItem from "./TreeViewItem";
-import TreeViewItemContainer from "./TreeViewItemContainer";
-import TreeBadge from "./TreeBadge";
+import TreeView from "../components/TreeView";
+import CirclePointer from "../components/CirclePointer";
+import TreeViewItem from "../components/TreeViewItem";
+import TreeViewItemContainer from "../components/TreeViewItemContainer";
+import TreeBadge from "../components/TreeBadge";
+import TreeViewExpander from "../components/TreeViewExpander";
 
 export interface TestViewProps {
   header: string;
-  children?: React.ReactNode;
 }
 
-const TestView: React.FC<TestViewProps> = ({ header, children }) => {
+const TestView: React.FC<TestViewProps> = ({ header }) => {
   return (
     <TreeView header={header}>
       <CirclePointer header={"test header"} />
@@ -54,12 +54,33 @@ const TestView: React.FC<TestViewProps> = ({ header, children }) => {
         </TreeViewItem>
       </TreeViewItemContainer>
       <CirclePointer header={"test header"} showMainConnector={true} />
+      <TreeViewItemContainer>
+        <TreeViewExpander>
+          <div>xxxxxxxxxxxx</div>
+          <div>xxxxxxxxxxxx</div>
+          <div>xxxxxxxxxxxx</div>
+          <div>xxxxxxxxxxxx</div>
+          <div>xxxxxxxxxxxx</div>
+          <div>xxxxxxxxxxxx</div>
+          <div>xxxxxxxxxxxx</div>
+          <div>xxxxxxxxxxxx</div>
+          <div>xxxxxxxxxxxx</div>
+          <div>xxxxxxxxxxxx</div>
+          <div>xxxxxxxxxxxx</div>
+          <div>xxxxxxxxxxxx</div>
+          <div>xxxxxxxxxxxx</div>
+          <div>xxxxxxxxxxxx</div>
+          <div>xxxxxxxxxxxx</div>
+        </TreeViewExpander>
+      </TreeViewItemContainer>
+      <TreeViewItemContainer>
+        <TreeViewExpander expanded>oooooooooo</TreeViewExpander>
+      </TreeViewItemContainer>
       <CirclePointer
         header={"test header"}
         showMainConnector={true}
         setAsLast
       />
-      {children}
     </TreeView>
   );
 };

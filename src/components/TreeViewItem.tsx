@@ -49,16 +49,16 @@ const TreeViewItem: React.FC<TreeViewItemProps> = ({
   }
   correctedChildWidth = 100 - correctedTitleWidth;
   if (direction === "col") {
-    correctedTitleWidth = 94;
-    correctedChildWidth = 94;
+    correctedTitleWidth = 100;
+    correctedChildWidth = 100;
     layoutStyle = {
       flexDirection: "column",
       alignItems: "flex-start",
       backgroundSize: `${bgGradientSize}%`,
     };
     itemStyle = {
-      paddingLeft: "1.5rem",
-      paddingRight: "1.5rem",
+      paddingLeft: "0.75rem",
+      paddingRight: "0.75rem",
       width: `${correctedChildWidth}%`,
     };
   } else {
@@ -69,7 +69,7 @@ const TreeViewItem: React.FC<TreeViewItemProps> = ({
     };
     itemStyle = {
       paddingLeft: 0,
-      paddingRight: 0,
+      paddingRight: "0.75rem",
       width: `${correctedChildWidth}%`,
     };
   }

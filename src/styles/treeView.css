@@ -215,8 +215,8 @@
 .treeViewTechPanelHeader {
   /* width: 25%; */
   height: 100%;
-  padding: 0.75rem 1.5rem;
-  font-size: 20px;
+  padding: 0.75rem;
+  font-size: 16px;
   color: #ffffff;
 }
 
@@ -228,6 +228,54 @@
   justify-content: start;
   margin-top: 0.5rem !important;
   margin-bottom: 0.5rem !important;
+}
+
+.treeViewExpander {
+  border-radius: inherit;
+}
+
+.treeViewExpanderHeaderContainer {
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.treeViewExpanderHeader {
+  flex-grow: 1;
+}
+
+.treeViewExpanderHeaderContainer svg {
+  transition: transform 0.3s ease-in-out;
+}
+
+.treeViewExpanderHeaderContainer.expanded svg {
+  transform: rotate(180deg);
+}
+
+.treeViewExpanderHeaderContainer svg {
+  transition: transform 0.3s ease-in-out;
+}
+
+.treeViewExpanderBodyContainer {
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  max-height: 0;
+}
+
+.treeViewExpanderBodyContainer.expanded {
+  max-height: 100px;
+}
+
+.treeViewExpanderBody {
+  padding: 0.75rem;
+  padding-top: 0;
+}
+
+.treeViewExpanderBodyLiner {
+  border: none;
+  border-top: 1px solid;
 }
 
 @media screen and (max-width: 450px) {
@@ -246,7 +294,7 @@
 
   .treeViewTechPanelHeader {
     width: 100%;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem;
   }
 
   .treeViewTechPanelItems {

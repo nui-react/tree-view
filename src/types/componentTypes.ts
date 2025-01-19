@@ -1,6 +1,14 @@
-export interface ButtonProps {
-  label: string;
-  onClick: () => void;
+import CirclePointer from "../components/CirclePointer";
+import TreeViewItemContainer from "../components/TreeViewItemContainer";
+
+export type Direction = "col" | "row";
+export type TreeViewAllowedChildren =
+  | React.ReactElement<typeof CirclePointer>
+  | React.ReactElement<typeof TreeViewItemContainer>;
+
+export interface TreeViewProps {
+  header: string;
+  children: TreeViewAllowedChildren[];
 }
 
 export interface CirclePointerProps {
@@ -8,13 +16,6 @@ export interface CirclePointerProps {
   showMainConnector?: boolean;
   setAsLast?: boolean;
 }
-
-export interface TreeViewProps {
-  header: string;
-  children?: React.ReactNode;
-}
-
-export type Direction = 'col' | 'row';
 
 export interface TreeViewItemProps {
   title: string;
@@ -25,10 +26,24 @@ export interface TreeViewItemProps {
 }
 
 export interface TreeViewItemContainerProps {
-  children?: React.ReactNode;
+  children: React.ReactNode;
 }
 
 export interface TreeBadgeProps {
-    label: string;
-    img?: string;
+  label: string;
+  img?: string;
+}
+
+export interface TreeViewExpanderProps {
+  expanded?: boolean;
+  children: React.ReactNode;
+}
+
+export interface DownArrowProps {
+  size?: number;
+  color?: string;
+}
+
+export interface TreeTreeLinerProps {
+  color?: string;
 }
