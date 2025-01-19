@@ -18,11 +18,13 @@ export default [
         file: packageJson.main,
         format: "cjs",
         sourcemap: true,
+        assetFileNames: 'assets/[name]-[hash][extname]',
       },
       {
         file: packageJson.module,
         format: "esm",
         sourcemap: true,
+        assetFileNames: 'assets/[name]-[hash][extname]',
       },
     ],
     plugins: [
