@@ -1,81 +1,109 @@
+/********************* configs *********************/
+body * {
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --treeview_white: #ffffff;
+  --treeview_primary: #00f0ff;
+  --treeview_primary_light: #b7fbff;
+  --treeview_primary_dim: #00f0ff80;
+  --treeview_primary_border: 1px solid var(--treeview_primary);
+  --treeview_primary_dim_border: 1px solid var(--treeview_primary_dim);
+  --treeview_primary_transition: all 500ms cubic-bezier(0.45, 0, 0.55, 1);
+  --treeview_tansparent_bgx2: rgba(0, 194, 255, 0.2);
+  --treeview_tansparent_bgx3: rgba(0, 194, 255, 0.3);
+  --treeview_tansparent_bgx6: rgba(0, 194, 255, 0.6);
+  --treeview_gradient_bgx6: linear-gradient(
+    90deg,
+    var(--treeview_tansparent_bgx6) 0%,
+    rgba(217, 217, 217, 0) 100%
+  );
+}
+
+/* for Dark Theme */
+.dark-theme {
+  --treeview_primary: #003033;
+}
+
 /********************* shapes styles *********************/
-.treeViewHeaderDot {
+.treeViewPanel .treeViewHeaderDot {
   padding-bottom: 15px;
 }
 
-.outerCircle {
+.treeViewPanel .outerCircle {
   width: 30px;
   height: 30px;
   min-width: 30px;
-  background: rgba(0, 194, 255, 0.3);
+  background: var(--treeview_tansparent_bgx3);
   border-radius: 50%;
-  border: 1px solid #00f0ff;
+  border: var(--treeview_primary_border);
   position: relative;
-  transition: all 500ms cubic-bezier(0.45, 0, 0.55, 1);
+  transition: var(--treeview_primary_transition);
 }
 
-.middleCircle {
+.treeViewPanel .middleCircle {
   width: 20px;
   height: 20px;
   min-width: 20px;
-  background: rgba(0, 194, 255, 0.6);
+  background: var(--treeview_tansparent_bgx6);
   border-radius: 50%;
-  border: 1px solid #00f0ff;
+  border: var(--treeview_primary_border);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: all 500ms cubic-bezier(0.45, 0, 0.55, 1);
+  transition: var(--treeview_primary_transition);
 }
 
-.innerCircle {
+.treeViewPanel .innerCircle {
   width: 10px;
   height: 10px;
   min-width: 10px;
-  background: #ffffff;
+  background: var(--treeview_white);
   border-radius: 50%;
-  border: 1px solid #ffffff;
+  border: 1px solid var(--treeview_white);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: all 500ms cubic-bezier(0.45, 0, 0.55, 1);
+  transition: var(--treeview_primary_transition);
 }
 
-.connectorHeaderVerticalLine {
-  border-left: 1px solid #00f0ff80;
+.treeViewPanel .connectorHeaderVerticalLine {
+  border-left: var(--treeview_primary_border);
   margin-top: 16px;
 }
 
-.withMainConnector {
+.treeViewPanel .withMainConnector {
   margin-left: -16px;
 }
 
-.withoutMainConnector {
+.treeViewPanel .withoutMainConnector {
   margin-left: 16px;
 }
 
-.connectorVerticalLine {
-  border-left: 1px solid #00f0ff80;
+.treeViewPanel .connectorVerticalLine {
+  border-left: var(--treeview_primary_border);
 }
 
-.itemConnector {
+.treeViewPanel .itemConnector {
   height: auto;
   margin-left: -6px;
   display: flex;
 }
 
-.connectorDot {
+.treeViewPanel .connectorDot {
   width: 10px;
   height: 10px;
-  background: #ffffff;
+  background: var(--treeview_white);
   border-radius: 50%;
-  border: 1px solid #ffffff;
+  border: 1px solid var(--treeview_white);
   z-index: 1;
 }
 
-.connectorHorizantalLine {
-  border: 1px solid #00f0ff80;
+.treeViewPanel .connectorHorizantalLine {
+  border: var(--treeview_primary_border);
   border-radius: 0 0 0 10px;
   border-top: none;
   border-right: none;
@@ -84,15 +112,15 @@
   margin-left: -6.5px;
 }
 
-.treeViewItemAccordianBreakLine {
+.treeViewPanel .treeViewItemAccordianBreakLine {
   margin-top: 0 !important;
   margin-bottom: 1rem !important;
   border: none;
-  border-top: 1px solid #00f0ff80;
+  border-top: var(--treeview_primary_border);
 }
 
-.techBadge {
-  border: 1px solid #00f0ff80;
+.treeViewPanel .techBadge {
+  border: var(--treeview_primary_border);
   border-radius: 50px;
   padding: 5px;
   padding-top: 0;
@@ -100,78 +128,78 @@
   width: auto;
   min-width: 30px;
   height: 30px;
-  background-color: rgba(0, 194, 255, 0.2);
+  background-color: var(--treeview_tansparent_bgx2);
   transition: 5s ease-in-out;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.techBadgeLogo {
+.treeViewPanel .techBadgeLogo {
   height: 20px;
   width: auto;
   aspect-ratio: 1/1;
 }
 
-.badgeName {
+.treeViewPanel .badgeName {
   display: block;
   width: auto;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
-  color: #b7fbff;
+  color: var(--treeview_primary_light);
 }
 
 /********************* layout styles *********************/
-.treeViewHeaderPanel {
+.treeViewPanel .treeViewHeaderPanel {
   display: flex;
 }
 
-.treeViewHeader {
-  color: #00f0ff;
+.treeViewPanel .treeViewHeader {
+  color: var(--treeview_primary);
   /* padding-left: 35px; */
   padding-top: 3px;
   font-size: 24px;
 }
 
-.treeViewItem {
+.treeViewPanel .treeViewItem {
   padding-left: 16px;
   height: 100%;
   display: flex;
 }
 
-.treeViewItem:last-child .connectorVerticalLine {
+.treeViewPanel .treeViewItem:last-child .connectorVerticalLine {
   border-left: none;
 }
 
-.treeViewItem:last-child .treeViewItemCard {
+.treeViewPanel .treeViewItem:last-child .treeViewItemCard {
   margin-bottom: 25px;
 }
 
-.treeViewItemCard {
+.treeViewPanel .treeViewItemCard {
   width: 100%;
   padding-bottom: 1px;
   margin: 10px 0 10px 0;
-  background-color: rgba(0, 194, 255, 0.2);
-  border: 1px solid #00f0ff80;
+  background-color: var(--treeview_tansparent_bgx2);
+  border: var(--treeview_primary_border);
   border-radius: 10px;
   backdrop-filter: blur(10px);
   /* font-family: $codaFamilly; */
 }
 
-.treeViewItemAccordian {
+.treeViewPanel .treeViewItemAccordian {
   background-color: transparent;
   letter-spacing: 0.5px;
 }
 
-.treeViewItemAccordianContainer {
+.treeViewPanel .treeViewItemAccordianContainer {
   display: flex;
   align-items: center;
 }
 
-.treeViewItemAccordianImg {
+.treeViewPanel .treeViewItemAccordianImg {
   height: 60px;
   width: auto;
-  border: 1px solid #00f0ff80;
+  border: var(--treeview_primary_border);
   border-radius: 50%;
   aspect-ratio: 1/1;
   display: flex;
@@ -179,8 +207,8 @@
   align-items: center;
 }
 
-.roundedLogoHolder {
-  border: 1px solid #00f0ff80;
+.treeViewPanel .roundedLogoHolder {
+  border: var(--treeview_primary_border);
   border-radius: 50%;
   aspect-ratio: 1/1;
   display: flex;
@@ -188,7 +216,7 @@
   align-items: center;
 }
 
-.treeViewItemAccordianTechPanel {
+.treeViewPanel .treeViewItemAccordianTechPanel {
   display: flex;
   gap: 5px;
   flex-wrap: wrap;
@@ -197,30 +225,26 @@
   margin-bottom: 0.5rem !important;
 }
 
-.treeViewTechPanel {
+.treeViewPanel .treeViewTechPanel {
   display: flex;
   align-items: center;
   width: 100%;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 194, 255, 0.6) 0%,
-    rgba(217, 217, 217, 0) 100%
-  );
+  background: var(--treeview_gradient_bgx6);
   background-repeat: no-repeat;
   border-radius: inherit;
   /* background-size: 25%; */
   /* background-position-y: 0.5px; */
 }
 
-.treeViewTechPanelHeader {
+.treeViewPanel .treeViewTechPanelHeader {
   /* width: 25%; */
   height: 100%;
   padding: 0.75rem;
   font-size: 16px;
-  color: #ffffff;
+  color: var(--treeview_white);
 }
 
-.treeViewTechPanelItems {
+.treeViewPanel .treeViewTechPanelItems {
   /* width: 75%; */
   display: flex;
   gap: 5px;
@@ -230,11 +254,11 @@
   margin-bottom: 0.5rem !important;
 }
 
-.treeViewExpander {
+.treeViewPanel .treeViewExpander {
   border-radius: inherit;
 }
 
-.treeViewExpanderHeaderContainer {
+.treeViewPanel .treeViewExpanderHeaderContainer {
   padding: 0.75rem;
   display: flex;
   align-items: center;
@@ -242,62 +266,62 @@
   cursor: pointer;
 }
 
-.treeViewExpanderHeader {
+.treeViewPanel .treeViewExpanderHeader {
   flex-grow: 1;
 }
 
-.treeViewExpanderHeaderContainer svg {
+.treeViewPanel .treeViewExpanderHeaderContainer svg {
   transition: transform 0.3s ease-in-out;
 }
 
-.treeViewExpanderHeaderContainer.expanded svg {
+.treeViewPanel .treeViewExpanderHeaderContainer.expanded svg {
   transform: rotate(180deg);
 }
 
-.treeViewExpanderHeaderContainer svg {
+.treeViewPanel .treeViewExpanderHeaderContainer svg {
   transition: transform 0.3s ease-in-out;
 }
 
-.treeViewExpanderBodyContainer {
+.treeViewPanel .treeViewExpanderBodyContainer {
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
   max-height: 0;
 }
 
-.treeViewExpanderBodyContainer.expanded {
+.treeViewPanel .treeViewExpanderBodyContainer.expanded {
   max-height: 100px;
 }
 
-.treeViewExpanderBody {
+.treeViewPanel .treeViewExpanderBody {
   padding: 0.75rem;
   padding-top: 0;
 }
 
-.treeViewExpanderBodyLiner {
+.treeViewPanel .treeViewExpanderBodyLiner {
   border: none;
   border-top: 1px solid;
 }
 
 @media screen and (max-width: 450px) {
-  .treeViewItemAccordianContainer {
+  .treeViewPanel .treeViewItemAccordianContainer {
     flex-wrap: wrap;
   }
 
-  .treeViewItemAccordianImg {
+  .treeViewPanel .treeViewItemAccordianImg {
     margin-left: 0.5rem;
     margin-bottom: 0.5rem;
   }
 
-  .treeViewTechPanel {
+  .treeViewPanel .treeViewTechPanel {
     flex-wrap: wrap;
   }
 
-  .treeViewTechPanelHeader {
+  .treeViewPanel .treeViewTechPanelHeader {
     width: 100%;
     padding: 0.5rem;
   }
 
-  .treeViewTechPanelItems {
+  .treeViewPanel .treeViewTechPanelItems {
     margin-bottom: 1rem !important;
   }
 }

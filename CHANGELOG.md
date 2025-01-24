@@ -1,0 +1,30 @@
+# Changelog
+
+## [latest]
+
+## [1.1.2] - 2025-01-27
+
+### Added
+- Added `TreeText` component.
+- Added `TreeHeader` component.
+- Added CHANGELOG.md file.
+
+### Changed
+- Changed `TreeViewExpander` component name as `TreeExpander`.
+- Changed `TreeViewItem` component name as `TreeItem`.
+- Changed `TreeViewItemContainer` component name as `TreeViewItemContainer`.
+- Improved expand/collapse animation in `TreeExpander`.
+
+
+## [1.0.0] - 2025-01-19
+## [stable]
+
+### Added
+- Initial stable release of the component library.
+- Implemented `TreeView`, `TreeViewItem`, `TreeViewItemContainer`, `TreeViewExpander` components.
+- Implemented `TreeLiner`, `TreeBadge`, `CirclePointer`, `DownArrow` supportive components.
+- Refactored prop validation in all components.
+
+### Fixed
+- Fixed issue with asset paths in Rollup build.
+

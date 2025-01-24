@@ -1,11 +1,15 @@
 import React from "react";
 import "../styles/treeView.css";
-import { TreeViewExpanderProps } from "../types/componentTypes";
+import { TreeExpanderProps } from "../types/componentTypes";
 import DownArrow from "./DownArrow";
 import TreeLiner from "./TreeLiner";
+import TreeHeader from "./TreeHeader";
+import TreeText from "./TreeText";
 
-const TreeViewExpander: React.FC<TreeViewExpanderProps> = ({
+const TreeExpander: React.FC<TreeExpanderProps> = ({
   expanded: initialExpanded = false,
+  isSimpleHeader = true,
+  header,
   children,
 }) => {
   const [isExpanded, setIsExpanded] = React.useState(initialExpanded);
@@ -33,7 +37,13 @@ const TreeViewExpander: React.FC<TreeViewExpanderProps> = ({
         }`}
         onClick={handleExpander}
       >
-        <div className="treeViewExpanderHeader">header...</div>
+        <div className="treeViewExpanderHeader">
+          {isSimpleHeader ? (
+            <TreeText text={header} />
+          ) : (
+            <TreeHeader header={header} />
+          )}
+        </div>
         <DownArrow />
       </div>
       <div
@@ -51,4 +61,4 @@ const TreeViewExpander: React.FC<TreeViewExpanderProps> = ({
   );
 };
 
-export default TreeViewExpander;
+export default TreeExpander;

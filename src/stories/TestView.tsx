@@ -2,10 +2,10 @@ import React from "react";
 import "../styles/treeView.css";
 import TreeView from "../components/TreeView";
 import CirclePointer from "../components/CirclePointer";
-import TreeViewItem from "../components/TreeViewItem";
-import TreeViewItemContainer from "../components/TreeViewItemContainer";
+import TreeItem from "../components/TreeItem";
+import TreeItemContainer from "../components/TreeItemContainer";
 import TreeBadge from "../components/TreeBadge";
-import TreeViewExpander from "../components/TreeViewExpander";
+import TreeExpander from "../components/TreeExpander";
 
 export interface TestViewProps {
   header: string;
@@ -15,16 +15,16 @@ const TestView: React.FC<TestViewProps> = ({ header }) => {
   return (
     <TreeView header={header}>
       <CirclePointer header={"test header"} />
-      <TreeViewItemContainer>
-        <TreeViewItem title="my tree view 1" />
-      </TreeViewItemContainer>
-      <TreeViewItemContainer>
-        <TreeViewItem title="my tree view 1" direction="col">
+      <TreeItemContainer>
+        <TreeItem title="my tree view 1" />
+      </TreeItemContainer>
+      <TreeItemContainer>
+        <TreeItem title="my tree view 1" direction="col">
           hello world...!
-        </TreeViewItem>
-      </TreeViewItemContainer>
-      <TreeViewItemContainer>
-        <TreeViewItem
+        </TreeItem>
+      </TreeItemContainer>
+      <TreeItemContainer>
+        <TreeItem
           title="my tree view 2"
           bgGradientSize={25}
           titleWidth={40}
@@ -36,10 +36,10 @@ const TestView: React.FC<TestViewProps> = ({ header }) => {
           <TreeBadge label="my lable" />
           <TreeBadge label="my lable" />
           <TreeBadge label="my lable" />
-        </TreeViewItem>
-      </TreeViewItemContainer>
-      <TreeViewItemContainer>
-        <TreeViewItem
+        </TreeItem>
+      </TreeItemContainer>
+      <TreeItemContainer>
+        <TreeItem
           title="my tree view 3"
           bgGradientSize={25}
           titleWidth={40}
@@ -51,11 +51,11 @@ const TestView: React.FC<TestViewProps> = ({ header }) => {
           <TreeBadge label="my lable" />
           <TreeBadge label="my lable" />
           <TreeBadge label="my lable" />
-        </TreeViewItem>
-      </TreeViewItemContainer>
+        </TreeItem>
+      </TreeItemContainer>
       <CirclePointer header={"test header"} showMainConnector={true} />
-      <TreeViewItemContainer>
-        <TreeViewExpander>
+      <TreeItemContainer>
+        <TreeExpander header="ppppppp">
           <div>xxxxxxxxxxxx</div>
           <div>xxxxxxxxxxxx</div>
           <div>xxxxxxxxxxxx</div>
@@ -71,11 +71,13 @@ const TestView: React.FC<TestViewProps> = ({ header }) => {
           <div>xxxxxxxxxxxx</div>
           <div>xxxxxxxxxxxx</div>
           <div>xxxxxxxxxxxx</div>
-        </TreeViewExpander>
-      </TreeViewItemContainer>
-      <TreeViewItemContainer>
-        <TreeViewExpander expanded>oooooooooo</TreeViewExpander>
-      </TreeViewItemContainer>
+        </TreeExpander>
+      </TreeItemContainer>
+      <TreeItemContainer>
+        <TreeExpander header="xcx" expanded>
+          oooooooooo
+        </TreeExpander>
+      </TreeItemContainer>
       <CirclePointer
         header={"test header"}
         showMainConnector={true}

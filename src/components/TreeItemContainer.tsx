@@ -1,8 +1,8 @@
 import React from "react";
 import "../styles/treeView.css";
-import { TreeViewItemContainerProps } from "../types/componentTypes";
+import { TreeItemContainerProps } from "../types/componentTypes";
 
-const TreeViewItemContainer: React.FC<TreeViewItemContainerProps> = ({
+const TreeItemContainer: React.FC<TreeItemContainerProps> = ({
   children,
 }) => {
   return (
@@ -17,4 +17,4 @@ const TreeViewItemContainer: React.FC<TreeViewItemContainerProps> = ({
   );
 };
 
-export default TreeViewItemContainer;
+export default TreeItemContainer;

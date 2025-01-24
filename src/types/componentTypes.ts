@@ -1,10 +1,10 @@
 import CirclePointer from "../components/CirclePointer";
-import TreeViewItemContainer from "../components/TreeViewItemContainer";
+import TreeItemContainer from "../components/TreeItemContainer";
 
 export type Direction = "col" | "row";
 export type TreeViewAllowedChildren =
   | React.ReactElement<typeof CirclePointer>
-  | React.ReactElement<typeof TreeViewItemContainer>;
+  | React.ReactElement<typeof TreeItemContainer>;
 
 export interface TreeViewProps {
   header: string;
@@ -17,7 +17,7 @@ export interface CirclePointerProps {
   setAsLast?: boolean;
 }
 
-export interface TreeViewItemProps {
+export interface TreeItemProps {
   title: string;
   children?: React.ReactNode;
   direction?: Direction;
@@ -25,7 +25,7 @@ export interface TreeViewItemProps {
   titleWidth?: number;
 }
 
-export interface TreeViewItemContainerProps {
+export interface TreeItemContainerProps {
   children: React.ReactNode;
 }
 
@@ -34,8 +34,10 @@ export interface TreeBadgeProps {
   img?: string;
 }
 
-export interface TreeViewExpanderProps {
+export interface TreeExpanderProps {
   expanded?: boolean;
+  isSimpleHeader?: boolean;
+  header: string;
   children: React.ReactNode;
 }
 
@@ -46,4 +48,12 @@ export interface DownArrowProps {
 
 export interface TreeTreeLinerProps {
   color?: string;
+}
+
+export interface TreeHeaderProps {
+  header: string;
+}
+
+export interface TreeTextProps {
+  text: string;
 }
