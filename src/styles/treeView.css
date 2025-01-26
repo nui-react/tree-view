@@ -1,6 +1,12 @@
 /********************* configs *********************/
-body * {
-  font-family: "Poppins", sans-serif;
+@font-face {
+  font-family: "Coda";
+  src: local("Coda"), url("../assets/Coda-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+.treeViewPanel * {
+  font-family: 'Coda', cursive;
 }
 
 :root {
@@ -22,8 +28,11 @@ body * {
 }
 
 /* for Dark Theme */
-.dark-theme {
+.treeViewPanel.lightTheme {
+  --treeview_white: #04287c;
   --treeview_primary: #003033;
+  --treeview_primary_light: #001c1e;
+  --treeview_primary_dim: #00f0ff80;
 }
 
 /********************* shapes styles *********************/
@@ -156,8 +165,6 @@ body * {
 
 .treeViewPanel .treeViewHeader {
   color: var(--treeview_primary);
-  /* padding-left: 35px; */
-  padding-top: 3px;
   font-size: 24px;
 }
 
@@ -183,7 +190,6 @@ body * {
   border: var(--treeview_primary_border);
   border-radius: 10px;
   backdrop-filter: blur(10px);
-  /* font-family: $codaFamilly; */
 }
 
 .treeViewPanel .treeViewItemAccordian {
@@ -237,7 +243,6 @@ body * {
 }
 
 .treeViewPanel .treeViewTechPanelHeader {
-  /* width: 25%; */
   height: 100%;
   padding: 0.75rem;
   font-size: 16px;
@@ -245,7 +250,6 @@ body * {
 }
 
 .treeViewPanel .treeViewTechPanelItems {
-  /* width: 75%; */
   display: flex;
   gap: 5px;
   flex-wrap: wrap;

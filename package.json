@@ -1,6 +1,6 @@
 {
   "name": "@nui-react/tree-view",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "nui-React (Next UI - React) is a customizable react UI tool",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -15,6 +15,13 @@
     "type": "git",
     "url": "git+https://github.com/adeeshaashinshana/nui.git"
   },
+  "keywords": [
+    "treeView",
+    "react-treeView",
+    "next-treeView",
+    "nui-treeView",
+    "tree component"
+  ],
   "author": "Adeesha Mahalekam",
   "license": "MIT",
   "bugs": {

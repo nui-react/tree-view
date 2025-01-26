@@ -2,12 +2,16 @@
 
 ## [latest]
 
-## [1.1.2] - 2025-01-27
+## [1.1.2] - 2025-01-26
 
 ### Added
 - Added `TreeText` component.
 - Added `TreeHeader` component.
+- Added `theme` prop to `TreeView` component.
+- Added `Coda-Regular` as defualt font.
+- Added CSS variables.
 - Added CHANGELOG.md file.
+- Added README.md API documentation
 
 ### Changed
 - Changed `TreeViewExpander` component name as `TreeExpander`.

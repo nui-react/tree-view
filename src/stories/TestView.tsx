@@ -13,7 +13,7 @@ export interface TestViewProps {
 
 const TestView: React.FC<TestViewProps> = ({ header }) => {
   return (
-    <TreeView header={header}>
+    <TreeView header={header} theme="light">
       <CirclePointer header={"test header"} />
       <TreeItemContainer>
         <TreeItem title="my tree view 1" />

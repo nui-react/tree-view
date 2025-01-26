@@ -5,9 +5,11 @@ export type Direction = "col" | "row";
 export type TreeViewAllowedChildren =
   | React.ReactElement<typeof CirclePointer>
   | React.ReactElement<typeof TreeItemContainer>;
+export type ThemeType = "dark" | "light";
 
 export interface TreeViewProps {
   header: string;
+  theme?: ThemeType;
   children: TreeViewAllowedChildren[];
 }
 
@@ -46,7 +48,7 @@ export interface DownArrowProps {
   color?: string;
 }
 
-export interface TreeTreeLinerProps {
+export interface TreeLinerProps {
   color?: string;
 }
 

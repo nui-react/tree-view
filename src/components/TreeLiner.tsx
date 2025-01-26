@@ -1,8 +1,8 @@
 import React from "react";
 import "../styles/treeView.css";
-import { TreeTreeLinerProps } from "../types/componentTypes";
+import { TreeLinerProps } from "../types/componentTypes";
 
-const TreeLiner: React.FC<TreeTreeLinerProps> = ({
+const TreeLiner: React.FC<TreeLinerProps> = ({
   color = "rgba(0, 240, 255, 0.502)",
 }) => {
   return (
