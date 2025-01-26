@@ -36,19 +36,19 @@ function App() {
 
 ## Components
 
-#### <TreeView>
+`<TreeView>`
 | Prop | Type     | Description                | Value
 | :-------- | :------- | :---------------------------- |:-----------------
 | `title` | `string` | **Required**. |`text`
 | `children` | `ReactNode` | Optional. | **`<TreeItemContainer>`**, **`<CirclePointer/>`** 
 | `theme` | `string` | Optional.|**`dark`** or **`light`**. _(Default is `dark`)_
 
-#### <TreeItemContainer>
+`<TreeItemContainer>`
 | Prop | Type     | Description                | Value
 | :-------- | :------- | :---------------------------- |:-----------------
 | `children` | `ReactNode` | **Required**. |**`<TreeItem>`**, **`<TreeExpander>`** or _any ``ReactNode``_
 
-#### <TreeItem>
+`<TreeItem>`
 | Prop | Type     | Description                | Value
 | :-------- | :------- | :---------------------------- |:-----------------
 | `title` | `string` | **Required**. |`text`
@@ -57,7 +57,7 @@ function App() {
 | `bgGradientSize` | `number` | Optional. | any number between **`0-100`**  _(Default is `100`)_
 | `titleWidth` | `number` | Optional. | any number between **`10-100`**
 
-#### <TreeExpander>
+`<TreeExpander>`
 | Prop | Type     | Description                | Value
 | :-------- | :------- | :---------------------------- |:-----------------
 | `header` | `string` | **Required**. |`text`
@@ -65,36 +65,36 @@ function App() {
 | `expanded` | `boolean` |  Optional. |**`true`** or **`false`**. _(Default is `false`)_
 | `isSimpleHeader` | `boolean` |  Optional. |**`true`** or **`false`**. _(Default is `true`)_
 
-#### <TreeHeader>
+`<TreeHeader>`
 | Prop | Type     | Description                | Value
 | :-------- | :------- | :---------------------------- |:-----------------
 | `header` | `string` | **Required**. |`text`
 
-#### <TreeText>
+`<TreeText>`
 | Prop | Type     | Description                | Value
 | :-------- | :------- | :---------------------------- |:-----------------
 | `text` | `string` | **Required**. |`text`
 
-#### <TreeBadge>
+`<TreeBadge>`
 | Prop | Type     | Description                | Value
 | :-------- | :------- | :---------------------------- |:-----------------
 | `label` | `string` | **Required**. |`text`
 | `img` | `string` | Optional. |imge **`URL`** or react **`img`** component
 
-#### <CirclePointer>
+`<CirclePointer>`
 | Prop | Type     | Description                | Value
 | :-------- | :------- | :---------------------------- |:-----------------
 | `header` | `string` | **Required**. |`text`
 | `showMainConnector` | `boolean` |  Optional. |**`true`** or **`false`**. _(Default is `true`)_
 | `setAsLast` | `boolean` |  Optional. |**`true`** or **`false`**. _(Default is `false`)_
 
-#### <DownArrow>
+`<DownArrow>`
 | Prop | Type     | Description                | Value
 | :-------- | :------- | :---------------------------- |:-----------------
 | `size` | `number` | Optional. |any number more than **`0`**  _(Default is `10`)_
 | `color` | `string` | Optional. |any **`Color Code`** _(Default is `#00f0ff`)_
 
-#### <TreeLiner>
+`<TreeLiner>`
 | Prop | Type     | Description                | Value
 | :-------- | :------- | :---------------------------- |:-----------------
 | `color` | `string` | Optional. |any **`Color Code`** _(Default is `rgba(0, 240, 255, 0.502)`)_
