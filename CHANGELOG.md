@@ -1,6 +1,10 @@
 # Changelog
 
 ## [latest]
+## [1.1.3] - 2025-02-22
+
+### Added
+- Added convensional comments for the all components.
 
 ## [1.1.2] - 2025-01-26
 
@@ -21,7 +25,6 @@
 
 
 ## [1.0.0] - 2025-01-19
-## [stable]
 
 ### Added
 - Initial stable release of the component library.

@@ -2,6 +2,19 @@ import React from "react";
 import "../styles/treeView.css";
 import { DownArrowProps } from "../types/componentTypes";
 
+/**
+ * @description DownArrow component that renders a down arrow SVG icon.
+ *
+ * @param {number} [size=10] - The size (height and width) of the arrow icon in pixels. Defaults to 10.
+ * @param {string} [color="#00f0ff"] - The fill color of the arrow icon. Defaults to "#00f0ff" (a light blue).
+ *
+ * @example
+ * <DownArrow size={20} color="red" />
+ *
+ * @example
+ * <DownArrow />
+ */
+
 const DownArrow: React.FC<DownArrowProps> = ({
   size = 10,
   color = "#00f0ff",

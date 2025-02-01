@@ -3,23 +3,34 @@ import "../styles/treeView.css";
 import { TreeItemProps } from "../types/componentTypes";
 
 /**
- * @description TreeItem component that renders a tree item with a title and user provided content.
+ * @description reeItem component that renders a tree item with a title and user provided content.
  *
- * @param {string} title - The title of the TreeItem.
- * @param {React.ReactNode} [children] - The content to be displayed within the TreeItem.
- * This can be any valid React node, including other components, text, or elements.
- * @param {'col' | 'row'} [direction='row'] - The direction of the layout (column or row). Defaults to 'row'.
- * If direction set to 'col', no need to provide 'titleWidth' prop & it will be 100 by defulat.
- * @param {number} [bgGradientSize=100] - The size of the background gradient as a percentage.
- * @param {number} [titleWidth] - The width of the title section as a percentage.
+ * @param {string} title - The title text to display for the item.
+ * @param {React.ReactNode} [children] - The content to display within the item (optional).
+ * @param {string} [direction="row"] - The layout direction of the item ("row" or "col"). Defaults to "row".
+ * * If direction set to 'col', no need to provide 'titleWidth' prop & it will be 100 by defulat.
+ * @param {number} [bgGradientSize=100] - The size of the background gradient as a percentage. Defaults to 100.
+ * @param {number} [titleWidth=children ? 25 : 100] - The width of the title as a percentage.
  * Must be between 10 and 100. Defaults to 25% if children are present, otherwise 100%.
+ * Values are clamped to valid ranges, with warnings logged to the console if invalid values are provided.
  *
  * @example
  * <TreeItem title="Item 1">
- *   <TreeBadge label="my lable"/>
+ *   <p>Content of item 1.</p>
  * </TreeItem>
  *
+ * @example
+ * <TreeItem title="Item 2" direction="col" bgGradientSize={50}>
+ *   <ul>
+ *     <li>Subitem 1</li>
+ *     <li>Subitem 2</li>
+ *   </ul>
+ * </TreeItem>
+ *
+ * @example
+ * <TreeItem title="Item 3" titleWidth={75} />
  */
+
 const TreeItem: React.FC<TreeItemProps> = ({
   title,
   children,
