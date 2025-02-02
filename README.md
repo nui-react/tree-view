@@ -84,30 +84,30 @@ function App() {
 
 `<TreeHeader>`
 
-| Prop               | Type     | Description   | Value                                        |
-| :----------------- | :------- | :------------ | :------------------------------------------- | ----------- | ------------- | --------------- | ------------- | ----------- | ---------------------------- | ------------- | ------------------------------------ |
-| `header`           | `string` | **Required**. | `text`                                       |
-| `logo`             | `string` | Optional.     | image **`URL`** or react **`img`** component |
-| `subHeader`        | `string` | Optional.     | `text`                                       |
-| `desc`             | `string` | Optional.     | `text`                                       |
-| `link`             | `string` | Optional.     | `URL`                                        |
-| `sublink`          | `string` | Optional.     | `URL`                                        |
-| `descLink`         | `string` | Optional.     | `URL`                                        |
-| `headerVarient`    | `string` | Optional.     | **`h1`**                                     | **`h2`**    | **`h3`**      | **`h4`**        | **`h5`**      | **`h6`**    | **`p`**. _(Default is `h1`)_ |
-| `subHeaderVarient` | `string` | Optional.     | **`h1`**                                     | **`h2`**    | **`h3`**      | **`h4`**        | **`h5`**      | **`h6`**    | **`p`**. _(Default is `h3`)_ |
-| `descVarient`      | `string` | Optional.     | **`h1`**                                     | **`h2`**    | **`h3`**      | **`h4`**        | **`h5`**      | **`h6`**    | **`p`**. _(Default is `p`)_  |
-| `headerColor`      | `string` | Optional.     | **`white`**                                  | **`black`** | **`primary`** | **`secondary`** | **`success`** | **`error`** | **`info`**                   | **`warning`** | **`mute`**. _(Default is `white`)_   |
-| `subHeaderColor`   | `string` | Optional.     | **`white`**                                  | **`black`** | **`primary`** | **`secondary`** | **`success`** | **`error`** | **`info`**                   | **`warning`** | **`mute`**. _(Default is `primary`)_ |
-| `descColor`        | `string` | Optional.     | **`white`**                                  | **`black`** | **`primary`** | **`secondary`** | **`success`** | **`error`** | **`info`**                   | **`warning`** | **`mute`**. _(Default is `mute`)_    |
+| Prop               | Type     | Description   | Value                                                                                                                                                    |
+| :----------------- | :------- | :------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `header`           | `string` | **Required**. | `text`                                                                                                                                                   |
+| `logo`             | `string` | Optional.     | image **`URL`** or react **`img`** component                                                                                                             |
+| `subHeader`        | `string` | Optional.     | `text`                                                                                                                                                   |
+| `desc`             | `string` | Optional.     | `text`                                                                                                                                                   |
+| `link`             | `string` | Optional.     | `URL`                                                                                                                                                    |
+| `sublink`          | `string` | Optional.     | `URL`                                                                                                                                                    |
+| `descLink`         | `string` | Optional.     | `URL`                                                                                                                                                    |
+| `headerVarient`    | `string` | Optional.     | **`h1`**, **`h2`**, **`h3`**, **`h4`**, **`h5`**, **`h6`** or **`p`**. _(Default is `h1`)_                                                               |
+| `subHeaderVarient` | `string` | Optional.     | **`h1`**, **`h2`**, **`h3`**, **`h4`**, **`h5`**, **`h6`** or **`p`**. _(Default is `h3`)_                                                               |
+| `descVarient`      | `string` | Optional.     | **`h1`**, **`h2`**, **`h3`**, **`h4`**, **`h5`**, **`h6`** or **`p`**. _(Default is `p`)_                                                                |
+| `headerColor`      | `string` | Optional.     | **`white`**, **`black`**, **`primary`**, **`secondary`**, **`success`**, **`error`**, **`info`** , **`warning`** or **`mute`**. _(Default is `white`)_   |
+| `subHeaderColor`   | `string` | Optional.     | **`white`**, **`black`**, **`primary`**, **`secondary`**, **`success`**, **`error`**, **`info`** , **`warning`** or **`mute`**. _(Default is `primary`)_ |
+| `descColor`        | `string` | Optional.     | **`white`**, **`black`**, **`primary`**, **`secondary`**, **`success`**, **`error`**, **`info`** , **`warning`** or **`mute`** . _(Default is `mute`)_   |
 
 `<TreeText>`
 
-| Prop        | Type     | Description   | Value       |
-| :---------- | :------- | :------------ | :---------- | ----------- | ------------- | --------------- | ------------- | ----------- | --------------------------- | ------------- | ---------------------------------- |
-| `text`      | `string` | **Required**. | `text`      |
-| `varient`   | `string` | Optional.     | **`h1`**    | **`h2`**    | **`h3`**      | **`h4`**        | **`h5`**      | **`h6`**    | **`p`**. _(Default is `p`)_ |
-| `color`     | `string` | Optional.     | **`white`** | **`black`** | **`primary`** | **`secondary`** | **`success`** | **`error`** | **`info`**                  | **`warning`** | **`mute`**. _(Default is `white`)_ |
-| `className` | `string` | Optional.     | any         |
+| Prop        | Type     | Description   | Value                                                                                                                                                  |
+| :---------- | :------- | :------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `text`      | `string` | **Required**. | `text`                                                                                                                                                 |
+| `varient`   | `string` | Optional.     | **`h1`**, **`h2`**, **`h3`**, **`h4`**, **`h5`**, **`h6`** or **`p`**. _(Default is `p`)_                                                              |
+| `color`     | `string` | Optional.     | **`white`**, **`black`**, **`primary`**, **`secondary`**, **`success`**, **`error`**, **`info`** , **`warning`** or **`mute`**. _(Default is `white`)_ |
+| `className` | `string` | Optional.     | any                                                                                                                                                    |
 
 `<TreeBadge>`
 
@@ -118,13 +118,13 @@ function App() {
 
 `<TreeLink>`
 
-| Prop        | Type     | Description   | Value            |
-| :---------- | :------- | :------------ | :--------------- | ----------- | ------------- | ----------------------------------- |
-| `href`      | `string` | **Required**. | `URL`            |
-| `target`    | `string` | Optional.     | **`_blank`**     | **`_self`** | **`_parent`** | **`_top`**. _(Default is `_blank`)_ |
-| `title`     | `string` | Optional.     | `text`           |
-| `iconColor` | `string` | Optional.     | any `color code` |
-| `className` | `string` | Optional.     | any              |
+| Prop        | Type     | Description   | Value                                                                            |
+| :---------- | :------- | :------------ | :------------------------------------------------------------------------------- |
+| `href`      | `string` | **Required**. | `URL`                                                                            |
+| `target`    | `string` | Optional.     | **`_blank`**, **`_self`**, **`_parent`**, or **`_top`**. _(Default is `_blank`)_ |
+| `title`     | `string` | Optional.     | `text`                                                                           |
+| `iconColor` | `string` | Optional.     | any `color code`                                                                 |
+| `className` | `string` | Optional.     | any                                                                              |
 
 `<CirclePointer>`
 
