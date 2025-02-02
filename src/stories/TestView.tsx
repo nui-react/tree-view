@@ -14,18 +14,21 @@ export interface TestViewProps {
 const TestView: React.FC<TestViewProps> = ({ header }) => {
   return (
     <TreeView header={header} theme="dark">
-      <CirclePointer header={"test header"} />
+      <CirclePointer header={"Test header"} />
       <TreeItemContainer>
-        <TreeItem title="my tree view 1" />
+        <TreeItem title="Simple TreeItem component without any children. (defult direction is row.)" />
       </TreeItemContainer>
       <TreeItemContainer>
-        <TreeItem title="my tree view 1" direction="col">
-          hello world...!
+        <TreeItem
+          title="TreeItem component with children. (direction set as col.)"
+          direction="col"
+        >
+          This is a text node...!
         </TreeItem>
       </TreeItemContainer>
       <TreeItemContainer>
         <TreeItem
-          title="my tree view 2"
+          title="TreeItem component with TreeBadges as children. (direction set as col.)"
           bgGradientSize={25}
           titleWidth={40}
           direction="col"
@@ -40,7 +43,7 @@ const TestView: React.FC<TestViewProps> = ({ header }) => {
       </TreeItemContainer>
       <TreeItemContainer>
         <TreeItem
-          title="my tree view 3"
+          title="TreeItem component with TreeBadges as children. (direction set as row.)"
           bgGradientSize={25}
           titleWidth={40}
           direction="row"
@@ -56,34 +59,34 @@ const TestView: React.FC<TestViewProps> = ({ header }) => {
       <CirclePointer header={"test header"} showMainConnector={true} />
       <TreeItemContainer>
         <TreeExpander
-          header="ppppppp"
+          header="TreeExpander Header"
           logo="https://picsum.photos/200"
           link="https://www.google.com"
-          subHeader="cc"
-          sublink="www.google.com"
-          desc="Skills Development Society of the University of Sri Jayewardenepura with the aspiration of rewarding the brilliant undergraduates "
-          descLink="www.google.com"
+          subHeader="TreeExpander sub-header"
+          // sublink="www.google.com"
+          desc="TreeExpander description text. Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+          // descLink="www.google.com"
         >
-          <div>xxxxxxxxxxxx</div>
-          <div>xxxxxxxxxxxx</div>
-          <div>xxxxxxxxxxxx</div>
-          <div>xxxxxxxxxxxx</div>
-          <div>xxxxxxxxxxxx</div>
-          <div>xxxxxxxxxxxx</div>
-          <div>xxxxxxxxxxxx</div>
-          <div>xxxxxxxxxxxx</div>
-          <div>xxxxxxxxxxxx</div>
-          <div>xxxxxxxxxxxx</div>
-          <div>xxxxxxxxxxxx</div>
-          <div>xxxxxxxxxxxx</div>
-          <div>xxxxxxxxxxxx</div>
-          <div>xxxxxxxxxxxx</div>
-          <div>xxxxxxxxxxxx</div>
+          <div>Lorem Ipsum is simply dummy text.</div>
+          <div>Lorem Ipsum is simply dummy text.</div>
+          <div>Lorem Ipsum is simply dummy text.</div>
+          <div>Lorem Ipsum is simply dummy text.</div>
+          <div>Lorem Ipsum is simply dummy text.</div>
+          <div>Lorem Ipsum is simply dummy text.</div>
+          <div>Lorem Ipsum is simply dummy text.</div>
+          <div>Lorem Ipsum is simply dummy text.</div>
+          <div>Lorem Ipsum is simply dummy text.</div>
+          <div>Lorem Ipsum is simply dummy text.</div>
+          <div>Lorem Ipsum is simply dummy text.</div>
         </TreeExpander>
       </TreeItemContainer>
       <TreeItemContainer>
-        <TreeExpander header="xcx" expanded>
-          oooooooooo
+        <TreeExpander
+          header="Expanded TreeExpander component with its children"
+          expanded
+        >
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry.
         </TreeExpander>
       </TreeItemContainer>
       <CirclePointer

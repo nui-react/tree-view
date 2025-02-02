@@ -23,10 +23,10 @@ const TreeHeader: React.FC<TreeHeaderProps> = ({
   sublink = "",
   descLink = "",
   headerVarient = "h1",
-  subHeaderVarient = "h3",
+  subHeaderVarient = "h4",
   descVarient = "p",
-  headerColor = "white",
-  subHeaderColor = "primary",
+  headerColor = "primary",
+  subHeaderColor = "white",
   descColor = "mute",
 }) => {
   return (
