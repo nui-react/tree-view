@@ -1,0 +1,11 @@
+export const primaryColor: string = "#00f0ff";
+export const primaryLightColor: string = "#b7fbff";
+export const primaryDimColor: string = "#00f0ff80";
+export const whiteColor: string = "#ffffff";
+export const blackColor: string = "#04287c";
+export const successColor: string = "rgb(0, 255, 13)";
+export const errorColor: string = "#f44336";
+export const infoColor: string = "#2196f3";
+export const warningColor: string = "#ff9800";
+export const muteColor: string = "#b3b3b3";
+export const secondaryColor: string = "#673ab7";

@@ -5,4 +5,8 @@ export { default as TreeExpander } from "./components/TreeExpander";
 export { default as TreeBadge } from "../src/components/TreeBadge";
 export { default as TreeText } from "./components/TreeText";
 export { default as TreeHeader } from "./components/TreeHeader";
+export { default as TreeLink } from "../src/components/TreeLink";
 export { default as CirclePointer } from "../src/components/CirclePointer";
+export { default as TreeLiner } from "../src/components/TreeLiner";
+export { default as DownArrow } from "../src/components/Icons/DownArrow";
+export { default as LinkIcon } from "../src/components/Icons/LinkIcon";
