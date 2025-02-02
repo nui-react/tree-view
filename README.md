@@ -42,6 +42,8 @@ function App() {
 }
 ```
 
+![@nui-react/tree-view Sample UI](https://github.com/nui-react/tree-view/blob/main/uiSamples/NUI_TreeView.png)
+
 ## Components
 
 `<TreeView>`
@@ -75,7 +77,7 @@ function App() {
 | `header`    | `string`    | **Required**. | `text`                                            |
 | `children`  | `ReactNode` | **Required**. | _any `ReactNode`_                                 |
 | `expanded`  | `boolean`   | Optional.     | **`true`** or **`false`**. _(Default is `false`)_ |
-| `logo`      | `string`    | Optional.     | image **`URL`** or react **`image`** component      |
+| `logo`      | `string`    | Optional.     | image **`URL`** or react **`image`** component    |
 | `subHeader` | `string`    | Optional.     | `text`                                            |
 | `desc`      | `string`    | Optional.     | `text`                                            |
 | `link`      | `string`    | Optional.     | `URL`                                             |
@@ -87,7 +89,7 @@ function App() {
 | Prop               | Type     | Description   | Value                                                                                                                                                    |
 | :----------------- | :------- | :------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `header`           | `string` | **Required**. | `text`                                                                                                                                                   |
-| `logo`             | `string` | Optional.     | image **`URL`** or react **`image`** component                                                                                                             |
+| `logo`             | `string` | Optional.     | image **`URL`** or react **`image`** component                                                                                                           |
 | `subHeader`        | `string` | Optional.     | `text`                                                                                                                                                   |
 | `desc`             | `string` | Optional.     | `text`                                                                                                                                                   |
 | `link`             | `string` | Optional.     | `URL`                                                                                                                                                    |
@@ -96,8 +98,8 @@ function App() {
 | `headerVarient`    | `string` | Optional.     | **`h1`**, **`h2`**, **`h3`**, **`h4`**, **`h5`**, **`h6`** or **`p`**. _(Default is `h1`)_                                                               |
 | `subHeaderVarient` | `string` | Optional.     | **`h1`**, **`h2`**, **`h3`**, **`h4`**, **`h5`**, **`h6`** or **`p`**. _(Default is `h4`)_                                                               |
 | `descVarient`      | `string` | Optional.     | **`h1`**, **`h2`**, **`h3`**, **`h4`**, **`h5`**, **`h6`** or **`p`**. _(Default is `p`)_                                                                |
-| `headerColor`      | `string` | Optional.     | **`white`**, **`black`**, **`primary`**, **`secondary`**, **`success`**, **`error`**, **`info`** , **`warning`** or **`mute`**. _(Default is `primary`)_   |
-| `subHeaderColor`   | `string` | Optional.     | **`white`**, **`black`**, **`primary`**, **`secondary`**, **`success`**, **`error`**, **`info`** , **`warning`** or **`mute`**. _(Default is `white`)_ |
+| `headerColor`      | `string` | Optional.     | **`white`**, **`black`**, **`primary`**, **`secondary`**, **`success`**, **`error`**, **`info`** , **`warning`** or **`mute`**. _(Default is `primary`)_ |
+| `subHeaderColor`   | `string` | Optional.     | **`white`**, **`black`**, **`primary`**, **`secondary`**, **`success`**, **`error`**, **`info`** , **`warning`** or **`mute`**. _(Default is `white`)_   |
 | `descColor`        | `string` | Optional.     | **`white`**, **`black`**, **`primary`**, **`secondary`**, **`success`**, **`error`**, **`info`** , **`warning`** or **`mute`** . _(Default is `mute`)_   |
 
 `<TreeText>`
@@ -111,9 +113,9 @@ function App() {
 
 `<TreeBadge>`
 
-| Prop    | Type     | Description   | Value                                        |
-| :------ | :------- | :------------ | :------------------------------------------- |
-| `label` | `string` | **Required**. | `text`                                       |
+| Prop    | Type     | Description   | Value                                          |
+| :------ | :------- | :------------ | :--------------------------------------------- |
+| `label` | `string` | **Required**. | `text`                                         |
 | `img`   | `string` | Optional.     | image **`URL`** or react **`image`** component |
 
 `<TreeLink>`
