@@ -1,10 +1,9 @@
 import React from "react";
 import "../styles/treeView.css";
 import { TreeExpanderProps } from "../types/componentTypes";
-import DownArrow from "./DownArrow";
+import DownArrow from "./Icons/DownArrow";
 import TreeLiner from "./TreeLiner";
 import TreeHeader from "./TreeHeader";
-import TreeText from "./TreeText";
 
 /**
  * @description TreeExpander component that creates an expandable section in a tree view. This displays a header that, when clicked,
@@ -28,9 +27,14 @@ import TreeText from "./TreeText";
 
 const TreeExpander: React.FC<TreeExpanderProps> = ({
   expanded: initialExpanded = false,
-  isSimpleHeader = true,
   header,
   children,
+  logo,
+  subHeader,
+  desc,
+  link,
+  sublink,
+  descLink,
 }) => {
   const [isExpanded, setIsExpanded] = React.useState(initialExpanded);
   const [maxHeight, setMaxHeight] = React.useState<number | string>(0);
@@ -58,13 +62,17 @@ const TreeExpander: React.FC<TreeExpanderProps> = ({
         onClick={handleExpander}
       >
         <div className="treeViewExpanderHeader">
-          {isSimpleHeader ? (
-            <TreeText text={header} />
-          ) : (
-            <TreeHeader header={header} />
-          )}
+          <TreeHeader
+            header={header}
+            logo={logo}
+            subHeader={subHeader}
+            desc={desc}
+            link={link}
+            sublink={sublink}
+            descLink={descLink}
+          />
         </div>
-        <DownArrow />
+        <DownArrow className="treeViewExpanderArrow"/>
       </div>
       <div
         className={`treeViewExpanderBodyContainer ${

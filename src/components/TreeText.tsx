@@ -11,11 +11,14 @@ import { TreeTextProps } from "../types/componentTypes";
  * <TreeText text="My Text" />
  */
 
-const TreeText: React.FC<TreeTextProps> = ({ text }) => {
+const TreeText: React.FC<TreeTextProps> = ({
+  text,
+  varient = "p",
+  color = "white",
+  className = "",
+}) => {
   return (
-    <div className="treeText">
-      {text}
-    </div>
+    <div className={`treeText ${varient} ${color} ${className}`}>{text}</div>
   );
 };
 

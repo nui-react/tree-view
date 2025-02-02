@@ -1,6 +1,6 @@
 import React from "react";
-import "../styles/treeView.css";
-import { DownArrowProps } from "../types/componentTypes";
+import "../../styles/treeView.css";
+import { DownArrowProps } from "../../types/componentTypes";
 
 /**
  * @description DownArrow component that renders a down arrow SVG icon.
@@ -18,6 +18,7 @@ import { DownArrowProps } from "../types/componentTypes";
 const DownArrow: React.FC<DownArrowProps> = ({
   size = 10,
   color = "#00f0ff",
+  className = ""
 }) => {
   return (
     <svg
@@ -28,6 +29,7 @@ const DownArrow: React.FC<DownArrowProps> = ({
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 330 330"
+      className={className}
       // xmlns:xlink="http://www.w3.org/1999/xlink"
       // xml:space="preserve"
     >

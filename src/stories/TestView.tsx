@@ -13,7 +13,7 @@ export interface TestViewProps {
 
 const TestView: React.FC<TestViewProps> = ({ header }) => {
   return (
-    <TreeView header={header} theme="light">
+    <TreeView header={header} theme="dark">
       <CirclePointer header={"test header"} />
       <TreeItemContainer>
         <TreeItem title="my tree view 1" />
@@ -55,7 +55,15 @@ const TestView: React.FC<TestViewProps> = ({ header }) => {
       </TreeItemContainer>
       <CirclePointer header={"test header"} showMainConnector={true} />
       <TreeItemContainer>
-        <TreeExpander header="ppppppp">
+        <TreeExpander
+          header="ppppppp"
+          logo="https://picsum.photos/200"
+          link="https://www.google.com"
+          subHeader="cc"
+          sublink="www.google.com"
+          desc="Skills Development Society of the University of Sri Jayewardenepura with the aspiration of rewarding the brilliant undergraduates "
+          descLink="www.google.com"
+        >
           <div>xxxxxxxxxxxx</div>
           <div>xxxxxxxxxxxx</div>
           <div>xxxxxxxxxxxx</div>
